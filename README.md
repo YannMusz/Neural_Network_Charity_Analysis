@@ -1,51 +1,38 @@
 # Neural_Network_Charity_Analysis
-Neural Networks and Deep Learning Models
+Deep Learning Models
 
 ## Environment
-Tensorflow v. 2.4.1
+Tensorflow 
 
 ## Overview 
-1. Compare the differences between the traditional machine learning classification and regression models and the neural network models.
-2. Describe the perceptron model and its components.
-3. Implement neural network models using TensorFlow.
-4. Explain how different neural network structures change algorithm performance.
-5. Preprocess and construct datasets for neural network models.
-6. Compare the differences between neural network models and deep neural networks.
-7. Implement deep neural network models using TensorFlow.
-8. Save trained TensorFlow models for later use.
+1. Differences between the traditional machine learning classification and regression models 
+2. Use neural network models using TensorFlow.
+4. Construct datasets for neural network models.
+6. State differences between neural network models and deep neural networks.
+7. Implement deep neural network models 
 
 ## Purpose
-A foundation, Alphabet Soup, wants to predict where to make investments.  The goal is to use machine learning and neural networks to apply features on a provided dataset to create a binary classifier that is capable of predicting whether applicants will be successful if funded by Alphabet Soup.  The initial file has 34,000 organizations and a number of columns that capture metadata about each organization from past successful fundings.
+Alphabet soup wanted to predict where and how to make investements. The end goal was to use machine learning models as well as neural networks to be able to predict whether applicants will succeed if funded by Alphabet Soup. 
 
 ## Results:
 
 ### Data Preprocessing
-1. What variable(s) are considered the target(s) for your model?    
-Checking to see if the target is marked as successful in the DataFrame, indicating that it has been successfully funded by AlphabetSoup.  
+1.Checking to see if the target is marked as successful in the DataFrame, showing that it has been successfully funded by AlphabetSoup.  
 
-2. What variable(s) are considered to be the features for your model?    
-The IS_SUCCESSFUL column is the feature chosen for this dataset.
+2. The IS_SUCCESSFUL column is the feature chosen for this dataset.
 
-3. What variable(s) are neither targets nor features, and should be removed from the input data?    
-The EIN and NAME columns will not increase the accuracy of the model and can be removed to improve code efficiency. 
+3. The EIN and NAME columns will not increase the accuracy of the model.
 
-### Compiling, Training, and Evaluating the Model
-4. How many neurons, layers, and activation functions did you select for your neural network model, and why?    
-In the optimized model, layer 1 started with 120 neurons with a relu activation.  For layer 2, it dropped to 80 neurons and continued with the relu activation.  From there, the sigmoid activation seemed to be the better fit for layers 3 (40 neurons) and layer 4 (20 neurons).    
+### Evaluating the Model
+![Pic 1](https://github.com/YannMusz/Neural_Network_Charity_Analysis/blob/main/Image/Model%202.PNG)   
 
-![Pic 1](https://github.com/Baylex/Neural_Network_Charity_Analysis/blob/main/Image/Model%202.PNG)   
+4. The target for the model was 75%, but the best the model could produce was 72%
 
-5. Were you able to achieve the target model performance?   
-The target for the model was 75%, but the best the model could produce was 72.7%.
-
-6. What steps did you take to try and increase model performance?   
-Columns were reviewed and the STATUS and SPECIAL_CONSIDERATIONS columns were dropped as well as increasing the number of neurons and layers.  Other activations were tried such as tanh, but the range that model produced went from 40% to 68% accuracy.  The linear activation produced the worst accuracy, around 28%.  The relu activation at the early layers and sigmoid activation at the latter layers gave the best results.  
-![Pic 2](https://github.com/Baylex/Neural_Network_Charity_Analysis/blob/main/Image/Dev_1_and_2.PNG)   
-![Pic 3](https://github.com/Baylex/Neural_Network_Charity_Analysis/blob/main/Image/Dev3.PNG)    
+6. Steps used to better performance
+Columns were analyzed and the STATUS and SPECIAL_CONSIDERATIONS columns were removed as well as increasing the number of neurons and layers.
+![Pic 2](https://github.com/YannMusz/Neural_Network_Charity_Analysis/blob/main/Image/Dev_1_and_2.PNG)   
+![Pic 3](https://github.com/YannMusz/Neural_Network_Charity_Analysis/blob/main/Image/Dev3.PNG)    
 
 ### Summary:   
-The relu and sigmoid activations yielded a 72.7% accuracy, which is the best the model could produce using various number of neurons and layers.  The next step should be to try the random forest classifier as it is less influenced by outliers.  
-
+The relu and sigmoid activations gave a 72.7% accuracy and is the most accurate model produced using various number of neurons and layers.
 -----
-Feedback:
-run it on epoch = 50
